@@ -40,7 +40,7 @@ class LoginComponent extends Component{
                 <label> Username/pass:</label>
                 <ul>
                     {/*<li>dbuser1/123</li>*/}
-                    <li>dbadmin1/123</li>
+                    <li>USER/USER</li>
                 </ul>
             </div>
         );

@@ -25,10 +25,10 @@ public class HrConfiguration {
             roleAppRepository.save(new RoleApp("ROLE_ADMIN"));
 
             userAppRepository.save(new UserApp("dbuser1", EncrytedPasswordUtils.encrytePassword("123"), true));
-            userAppRepository.save(new UserApp("dbadmin1", EncrytedPasswordUtils.encrytePassword("123"), true));
+            userAppRepository.save(new UserApp("USER", EncrytedPasswordUtils.encrytePassword("USER"), true));
 
             userRoleAppRepository.save(new UserRoleApp(userAppRepository.findByName("dbuser1"), roleAppRepository.findByName("ROLE_USER")));
-            userRoleAppRepository.save(new UserRoleApp(userAppRepository.findByName("dbadmin1"), roleAppRepository.findByName("ROLE_USER")));
+            userRoleAppRepository.save(new UserRoleApp(userAppRepository.findByName("USER"), roleAppRepository.findByName("ROLE_USER")));
 
             Employee employee = new Employee();
             employee.setFirstName("Иван");
